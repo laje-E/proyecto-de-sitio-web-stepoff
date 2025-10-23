@@ -1,0 +1,33 @@
+body{}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.imagenes {
+    display: flex;
+    border: 10px crimson;
+    border-style: ridge;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    margin-right: 50px;
+}
+
+.imagen_caja {
+    margin-left: 200px;
+    margin-right: 25%;
+    transform: scale(4); /* Aumenta al 150% */
+    border: 3px cyan;
+    border-top-style: outset;
+    border-left-style: inset;
+    border-right-style: inset;
+    border-bottom-style: outset;
+}
+
+.imagen_suelas {
+    margin-left: 28%;
+    transform: scale(4); /* Aumenta al 150% */
+    border: 3px cyan;
+    border-style: outset;
+}
