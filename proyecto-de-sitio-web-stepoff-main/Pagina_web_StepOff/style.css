@@ -1,5 +1,38 @@
+/*Parte global de los links*/
+.nav{
+    display: flex;
+}
+
+a {
+    display: flex;
+    margin-right: 20px;
+    text-decoration: underline;
+    color: mediumturquoise;
+}
+
+a:hover{
+    text-decoration: none;
+    color: lightblue;
+}
+
+.nav .carrito {
+    margin-left: 87%;
+}
+
+/*Home*/
+
+h1{
+    margin-top: 40px;
+    padding-left: 25px;
+    color: white;
+}
+
+p {
+    color: white;
+}
+
 body{
-    background-color: #f8f8f8;
+    background-color: rgb(0, 0, 0);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -8,26 +41,50 @@ img {
     height: 100px;
 }
 
-.imagenes {
+.Contenido{
+    background-color: black;
+    border: 1px double white;
+    margin-bottom: 40px;
+}
+
+.imagenes {                     
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    border: 10px crimson;
+    gap: 100px;      /*Gap es la separación horizontal que hay entre las dos imagenes que colocamos*/
+    border: 10px transparent;
     border-style: ridge;
     padding-top: 200px;
     padding-bottom: 200px;
     margin-right: 50px;
-    background-color: white;
+    background-color: black;
+
 }
 
-.imagen_caja {
-   
-   transform: scale(2.5);
-   border: 3px inset cyan;
-   border-radius: 10px;
-   padding: 10px;
 
+.imagen_caja {
+   display: flex;
+
+   transform: scale(2.5);
+   border: 5px crimson;
+   border-bottom-left-radius: 10px;
+   border-top-left-radius: 10px;
+   padding: 5px;
+   padding-right: 0px;
+
+   /*
+    border-top-style: inset;
+    border-left-style: outset;
+    border-right-style: inset;
+    */
+    border-bottom-style: outset;
+    border-left-style: inset;
+/*
+   border-top-style: outset;
+   border-left-style: inset;
+   border-right-style: inset;
+*/
+    margin-bottom: 400px;  
    
    
     /* margin-left: 200px;
@@ -41,9 +98,110 @@ img {
     
 }
 
+.imagen_caja p{
+   padding-left: 30px;
+   font-size: small;
+   margin-top: 35px;
+}
+
 .imagen_suelas {
-    margin-left: 28%;
+    display: flex;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-right: 250px;
+    margin-top: 355px; 
     transform: scale(4); /* Aumenta al 150% */
-    border: 3px cyan;
-    border-style: outset;
+    border: 3.8px crimson;
+    padding: 10px;
+
+    border-top-style: inset;
+    border-right-style: outset;
+    /*
+    border-left-style: outset;
+    border-right-style: inset;
+    border-bottom-style: outset;
+    */
+}
+
+.imagen_suelas p{
+    margin-right: 50px;
+    font-size: small;
+    margin-top: 30px;
+}
+
+.footer p {
+    color: white;
+}
+
+.header {
+    padding: 20px;
+}
+
+.logo {
+    max-width: 300px;
+    height: auto;
+}
+
+.descripcion_home {
+    margin-left: 75px;
+    margin-right: 100px;
+    font-size: x-large;
+}
+
+/*About*/
+
+.texto_about {
+    margin-left: 50px;
+    font-size: larger;
+    transition: all 1s ease;
+}
+
+.contenido p:hover {
+    color: crimson;
+    transition: color 1s ease;  /*Se hace un cambio de color cuando se pasa el mouse por encima, y este cambio tarda 1 segundo en efectuarse*/
+}
+
+
+/*Se escala para cada dispositivo*/
+
+@media (max-width: 768px) {
+
+    /* Reduce el tamaño máximo del logo para que se adapte mejor en celulares */
+    .logo {
+        max-width: 150px;
+    }
+
+    /* Cambia la como se muestra el menú de navegación a vertical y lo centra */
+    .nav {
+        flex-direction: column;     /* Los enlaces se apilan verticalmente */
+        align-items: center;        /* Centra los enlaces horizontalmente */
+    }
+
+    /* Ajusta los párrafos dentro de .contenido para facilitar la lectura en celulares */
+    .contenido p {
+        margin: 10px 20px;      /* Espaciado lateral para que no pegue al borde */
+        font-size: 1em;         /* Tamaño de fuente más adecuado para pantallas pequeñas */
+    }
+}
+
+/*Carrito*/
+
+.carrito-preview {
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+}
+
+.carrito-preview p {
+    font-size:x-large;
+}
+
+.carrito-preview button{
+    font-size: 2em;
+}
+
+/*Contacto*/
+
+.texto_contacto{
+    margin-left: 50px;
 }
