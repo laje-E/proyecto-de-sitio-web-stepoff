@@ -16,7 +16,7 @@ a:hover{
 }
 
 .nav .carrito {
-    margin-left: 87%;
+    margin-left: 85%;
 }
 
 /*Home*/
@@ -25,10 +25,14 @@ h1{
     margin-top: 40px;
     padding-left: 25px;
     color: white;
+    font-family: "Aldrich", sans-serif;
+    font-weight: 100;                   /*Determina el grosor del texto*/
+    font-style: italic;
 }
 
 p {
     color: white;
+    font-family: "Aldrich", sans-serif;
 }
 
 body{
@@ -51,7 +55,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px;      /*Gap es la separación horizontal que hay entre las dos imagenes que colocamos*/
+    gap: 50px;      /*Gap es la separación horizontal que hay entre las dos imagenes que colocamos*/
     border: 10px transparent;
     border-style: ridge;
     padding-top: 200px;
@@ -65,7 +69,7 @@ img {
 .imagen_caja {
    display: flex;
 
-   transform: scale(2.5);
+   transform: scale(2.5);       /*se encarga de aumentar o reducir el tamaño de un objeto, multiplica el tamaño del elemento por, en este caso, 2.5*/
    border: 5px crimson;
    border-bottom-left-radius: 10px;
    border-top-left-radius: 10px;
@@ -110,7 +114,7 @@ img {
     border-top-right-radius: 10px;
     margin-right: 250px;
     margin-top: 355px; 
-    transform: scale(4); /* Aumenta al 150% */
+    transform: scale(4); 
     border: 3.8px crimson;
     padding: 10px;
 
