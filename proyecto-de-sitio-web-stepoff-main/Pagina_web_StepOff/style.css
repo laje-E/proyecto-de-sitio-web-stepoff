@@ -165,6 +165,11 @@ img {
     transition: color 1s ease;  /*Se hace un cambio de color cuando se pasa el mouse por encima, y este cambio tarda 1 segundo en efectuarse*/
 }
 
+.valores {
+    margin-left: 50px;
+    text-decoration: underline;
+}
+
 
 /*Se escala para cada dispositivo*/
 
