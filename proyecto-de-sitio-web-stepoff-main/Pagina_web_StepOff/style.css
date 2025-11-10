@@ -93,7 +93,7 @@ img {
 /* Texto */
 .imagen_caja p,
 .imagen_suelas p {
-  font-size: 1rem;
+  font-size: 1.4rem;
   text-align: center;
   margin-top: 1rem;
   padding: 0 1rem;
@@ -122,7 +122,7 @@ img {
 .descripcion_home {
     margin-left: 4rem;
     margin-right: 6rem;
-    font-size: x-large;
+    font-size: 1.2rem;
 }
 
 /*About*/
