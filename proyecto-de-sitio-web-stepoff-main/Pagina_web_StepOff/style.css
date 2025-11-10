@@ -16,7 +16,7 @@ a:hover{
 }
 
 .nav .carrito {
-    margin-left: 85%;
+    margin-left: auto;
 }
 
 /*Home*/
@@ -51,88 +51,59 @@ img {
     margin-bottom: 3rem;
 }
 
-.imagenes {                     
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;  /*Gap es la separación horizontal que hay entre las dos imagenes que colocamos*/
-    padding: 5vh 2vw;   
-    border: 3% transparent;
-    border-style: ridge;
-    padding-top: 12rem;
-    padding-bottom: 12rem;
-    margin-right: 3rem;
-    background-color: black;
-
+.imagenes {
+  display: flex;
+  flex-direction:row;  /*indica como se ordenan los elementos dentro del div*/
+  flex-wrap: wrap;     /*si no hay espacio los objetos van a la siguiente linea disponible*/
+  border: transparent;
+  background-color: black;
+  padding: 1rem;
+  gap: 0; /* Sin separación entre elementos */
 }
 
-
-.imagen_caja {
-   display: flex;
-
-   transform: scale(2.5);       /*se encarga de aumentar o reducir el tamaño de un objeto, multiplica el tamaño del elemento por, en este caso, 2.5*/
-   border: 1% crimson;
-   border-bottom-left-radius: 2%;
-   border-top-left-radius: 2%;
-   padding: 1%;
-   padding-right: 0px;
-
-   /*
-    border-top-style: inset;
-    border-left-style: outset;
-    border-right-style: inset;
-    */
-    border-bottom-style: outset;
-    border-left-style: inset;
-/*
-   border-top-style: outset;
-   border-left-style: inset;
-   border-right-style: inset;
-*/
-    margin-bottom: 25rem;  
-   
-   
-    /* margin-left: 200px;
-    margin-right: 25%;
-    transform: scale(4); 
-    border: 3px cyan;
-    border-top-style: outset;
-    border-left-style: inset;
-    border-right-style: inset;
-    border-bottom-style: outset; */
-    
-}
-
-.imagen_caja p{
-   padding-left: 2rem;
-   font-size: small;
-   margin-top: 2rem;
-}
-
+/* Estilo compartido para ambas cajas */
+.imagen_caja,
 .imagen_suelas {
-    display: flex;
-    border-bottom-right-radius: 2%;
-    border-top-right-radius: 2%;
-    margin-right: 15rem;
-    margin-top: 22rem; 
-    transform: scale(4); 
-    border: 3.8px crimson;
-    padding: 2%;
-
-    border-top-style: inset;
-    border-right-style: outset;
-    /*
-    border-left-style: outset;
-    border-right-style: inset;
-    border-bottom-style: outset;
-    */
+  flex-grow: 1;     /*permite que el objeto disminuya de tamaño si es posible*/
+  flex-shrink: 1;   /*permite que el objeto aumente de tamaño si esta disponible*/
+  flex-basis: 300px;    /*define el tamaño base del objeto*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: black;
+}
+.imagen_suelas{
+    margin-top: 8rem;
+    border-top: 0.4rem crimson solid;
+    border-right: 0.4rem crimson solid;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
 }
 
-.imagen_suelas p{
-    margin-right: 3rem;
-    font-size: small;
-    margin-top: 2rem;
+.imagen_caja{
+    margin-bottom: 20rem;
+    border-bottom: 0.4rem crimson solid;
+    border-left: 0.4rem crimson solid;
+    border-bottom-left-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+}
+
+/* Texto */
+.imagen_caja p,
+.imagen_suelas p {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+
+/* Imágenes */
+.imagen_caja img,
+.imagen_suelas img {
+  max-width: 100%;
+  height: auto;
 }
 
 .footer p {
@@ -173,28 +144,6 @@ img {
 }
 
 
-/*Se escala para cada dispositivo*/
-
-@media (max-width: 768px) {
-
-    /* Reduce el tamaño máximo del logo para que se adapte mejor en celulares */
-    .logo {
-        max-width: 150px;
-    }
-
-    /* Cambia la como se muestra el menú de navegación a vertical y lo centra */
-    .nav {
-        flex-direction: column;     /* Los enlaces se apilan verticalmente */
-        align-items: center;        /* Centra los enlaces horizontalmente */
-    }
-
-    /* Ajusta los párrafos dentro de .contenido para facilitar la lectura en celulares */
-    .contenido p {
-        margin: 10px 20px;      /* Espaciado lateral para que no pegue al borde */
-        font-size: 1em;         /* Tamaño de fuente más adecuado para pantallas pequeñas */
-    }
-}
-
 /*Carrito*/
 
 .carrito-preview {
@@ -221,51 +170,25 @@ img {
 /*Escalabilidad para diversos dispositivos*/
 
 /* Tablets (768px a 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (max-width: 768px) {
   .imagenes {
     flex-direction: column;
-    padding: 100px 20px;
-    gap: 30px;
+    border: none;
+    border-top: 0.4rem solid crimson;
+    border-bottom: 0.4rem solid crimson;
+    border-radius: 0.5rem;
   }
 
-  .imagen_caja, .imagen_suelas {
-    transform: scale(1.5);
-    margin: 0 auto;
+  .imagen_caja,
+  .imagen_suelas {
+    border-right: none;
+    border-bottom: 0.2rem solid crimson;
   }
 
-  .descripcion_home {
-    font-size: large;
-    margin: 20px;
+  .imagen_suelas {
+    border-bottom: none;
   }
 }
 
-/* Pantallas pequeñas (hasta 480px) */
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.5em;
-    padding-left: 10px;
-  }
-
-  .nav a {
-    margin: 10px 0;
-    font-size: 1em;
-  }
-
-  .imagenes {
-    flex-direction: column;
-    padding: 50px 10px;
-    gap: 20px;
-  }
-
-  .imagen_caja, .imagen_suelas {
-    transform: scale(1.2);
-    margin: 0 auto;
-  }
-
-  .descripcion_home {
-    font-size: medium;
-    margin: 10px;
-  }
-}
 
 
