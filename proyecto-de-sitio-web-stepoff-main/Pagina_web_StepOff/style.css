@@ -5,7 +5,7 @@
 
 a {
     display: flex;
-    margin-right: 20px;
+    margin-right: 2vw;
     text-decoration: underline;
     color: mediumturquoise;
 }
@@ -22,8 +22,8 @@ a:hover{
 /*Home*/
 
 h1{
-    margin-top: 40px;
-    padding-left: 25px;
+    margin-top: 2%;
+    padding-left: 4vw;
     color: white;
     font-family: "Aldrich", sans-serif;
     font-weight: 100;                   /*Determina el grosor del texto*/
@@ -41,26 +41,28 @@ body{
 }
 
 img {
-    width: 100px;
-    height: 100px;
+    width: 6rem;
+    height: 6rem;
 }
 
 .Contenido{
     background-color: black;
     border: 1px double white;
-    margin-bottom: 40px;
+    margin-bottom: 3rem;
 }
 
 .imagenes {                     
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;      /*Gap es la separación horizontal que hay entre las dos imagenes que colocamos*/
-    border: 10px transparent;
+    flex-wrap: wrap;
+    gap: 2rem;  /*Gap es la separación horizontal que hay entre las dos imagenes que colocamos*/
+    padding: 5vh 2vw;   
+    border: 3% transparent;
     border-style: ridge;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    margin-right: 50px;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+    margin-right: 3rem;
     background-color: black;
 
 }
@@ -70,10 +72,10 @@ img {
    display: flex;
 
    transform: scale(2.5);       /*se encarga de aumentar o reducir el tamaño de un objeto, multiplica el tamaño del elemento por, en este caso, 2.5*/
-   border: 5px crimson;
-   border-bottom-left-radius: 10px;
-   border-top-left-radius: 10px;
-   padding: 5px;
+   border: 1% crimson;
+   border-bottom-left-radius: 2%;
+   border-top-left-radius: 2%;
+   padding: 1%;
    padding-right: 0px;
 
    /*
@@ -88,7 +90,7 @@ img {
    border-left-style: inset;
    border-right-style: inset;
 */
-    margin-bottom: 400px;  
+    margin-bottom: 25rem;  
    
    
     /* margin-left: 200px;
@@ -103,20 +105,20 @@ img {
 }
 
 .imagen_caja p{
-   padding-left: 30px;
+   padding-left: 2rem;
    font-size: small;
-   margin-top: 35px;
+   margin-top: 2rem;
 }
 
 .imagen_suelas {
     display: flex;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
-    margin-right: 250px;
-    margin-top: 355px; 
+    border-bottom-right-radius: 2%;
+    border-top-right-radius: 2%;
+    margin-right: 15rem;
+    margin-top: 22rem; 
     transform: scale(4); 
     border: 3.8px crimson;
-    padding: 10px;
+    padding: 2%;
 
     border-top-style: inset;
     border-right-style: outset;
@@ -128,9 +130,9 @@ img {
 }
 
 .imagen_suelas p{
-    margin-right: 50px;
+    margin-right: 3rem;
     font-size: small;
-    margin-top: 30px;
+    margin-top: 2rem;
 }
 
 .footer p {
@@ -138,24 +140,24 @@ img {
 }
 
 .header {
-    padding: 20px;
+    padding: 1rem;
 }
 
 .logo {
-    max-width: 300px;
+    max-width: 18rem;
     height: auto;
 }
 
 .descripcion_home {
-    margin-left: 75px;
-    margin-right: 100px;
+    margin-left: 4rem;
+    margin-right: 6rem;
     font-size: x-large;
 }
 
 /*About*/
 
 .texto_about {
-    margin-left: 50px;
+    margin-left: 3rem;
     font-size: larger;
     transition: all 1s ease;
 }
@@ -166,7 +168,7 @@ img {
 }
 
 .valores {
-    margin-left: 50px;
+    margin-left: 3rem;
     text-decoration: underline;
 }
 
@@ -214,3 +216,56 @@ img {
 .texto_contacto{
     margin-left: 50px;
 }
+
+
+/*Escalabilidad para diversos dispositivos*/
+
+/* Tablets (768px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .imagenes {
+    flex-direction: column;
+    padding: 100px 20px;
+    gap: 30px;
+  }
+
+  .imagen_caja, .imagen_suelas {
+    transform: scale(1.5);
+    margin: 0 auto;
+  }
+
+  .descripcion_home {
+    font-size: large;
+    margin: 20px;
+  }
+}
+
+/* Pantallas pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5em;
+    padding-left: 10px;
+  }
+
+  .nav a {
+    margin: 10px 0;
+    font-size: 1em;
+  }
+
+  .imagenes {
+    flex-direction: column;
+    padding: 50px 10px;
+    gap: 20px;
+  }
+
+  .imagen_caja, .imagen_suelas {
+    transform: scale(1.2);
+    margin: 0 auto;
+  }
+
+  .descripcion_home {
+    font-size: medium;
+    margin: 10px;
+  }
+}
+
+
